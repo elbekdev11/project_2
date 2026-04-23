@@ -27,7 +27,7 @@ include("../layouts/header.php");
     <input type="email" name="email" required><br><br>
      <label>Eski Parol:</label><br>
   <input type="password" name="password" required><br><br>
-    <label>Yangi Parol:</label><br>
+    <label>Yangi Parol:</label> <br>
       
     <input type="password" name="password" required><br><br>
 
