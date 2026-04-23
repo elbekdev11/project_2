@@ -9,7 +9,8 @@ $stmt=$conn->prepare($sql);
 $stmt->execute([
     ':id'=>$id,
 ])  ;
- echo "Malumot o'chirildi";
+$_SESSION["success"]="Malumotlar O'chirildi";
+    header("Location:index.php");
 }
 catch(PDOException $e){
 echo "Error: " . $sql . "<br>" . $e->getMessage();

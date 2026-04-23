@@ -9,7 +9,7 @@ require("db/connect.php");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Azamat Portfolio</title>
+  <title>Elbek Portfolio</title>
   <meta name="description" content="Frontend va web dizayn portfolio single page sahifasi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +57,7 @@ require("db/connect.php");
               <div class="row g-3">
                 <div class="col-6">
                   <div class="stat-box">
-                    <h3>2+</h3>
+                    <h3>1+</h3>
                     <p>Yillik tajriba</p>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ require("db/connect.php");
                 </div>
                 <div class="col-6">
                   <div class="stat-box">
-                    <h3>5+</h3>
+                    <h3>5</h3>
                     <p>Mamnun mijoz</p>
                   </div>
                 </div>
@@ -115,9 +115,9 @@ require("db/connect.php");
               </div>
               <div class="col-md-6">
                 <div class="skill-item">
-                  <span>JavaScript</span>
+                  <span>C++</span>
                   <div class="progress">
-                    <div class="progress-bar" style="width: 85%;">85%</div>
+                    <div class="progress-bar" style="width: 85%;">80%</div>
                   </div>
                 </div>
               </div>
@@ -156,8 +156,8 @@ require("db/connect.php");
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="service-card h-100">
-              <h5>UI/UX Dizayn</h5>
-              <p>Figma asosida sodda, chiroyli va foydalanuvchiga qulay interfeys dizaynlari tayyorlash.</p>
+              <h5>UI/UX Dastur</h5>
+              <p>Figma asosida sodda, chiroyli va foydalanuvchiga qulay interfeys dasturlar tayyorlash.</p>
             </div>
           </div>
         </div>
@@ -214,11 +214,26 @@ require("db/connect.php");
               <li><strong>Manzil:</strong> Khorezm, O'zbekiston</li>
             </ul>
           </div>
-          <?php
-          
-          
-          ?>
+         
           <div class="col-lg-7">
+                  <?php 
+            if(!empty($_SESSION["errors"])){
+               $errors=$_SESSION["errors"];
+                 echo "<ul>";
+                 foreach($errors as $error){
+                  echo "<li>". $error . "</li>";
+                 }
+                 echo "</ul>";
+                 unset($_SESSION["errors"]);
+                  
+            }
+            if(!empty($_SESSION["success"])){
+             echo $_SESSION["success"];
+              unset($_SESSION["success"]);
+            }
+            
+            
+            ?>
             <form class="contact-form"  action="add.php" method="POST">
               <div class="row g-3">
                 <div class="col-md-6">

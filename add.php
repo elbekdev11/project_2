@@ -21,7 +21,7 @@ $_SESSION["$errors"]=$errors;
 }
 
 try{
- $sql="INSERT INTO contact (name,email,mavzu,xabaringiz)
+ $sql="INSERT INTO contact (name,email,mavzu,xabaringiz,view)
  VALUES (:name,:email,:mavzu,:xabaringiz)";
  $stmt=$conn->prepare($sql);
  $stmt->execute([
@@ -29,8 +29,10 @@ try{
     ':email'=>$email,
     ':mavzu'=>$mavzu,
     ':xabaringiz'=>$xabar
+    ':view'=>0
  ]);
- echo "Malumot yozildi";
+    $_SESSION["success"]='';
+    header("Location:index.php");
 } catch(PDOException $e) {
   echo "Error: " . $sql . "<br>" . $e->getMessage();
 }

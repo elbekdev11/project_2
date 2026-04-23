@@ -1,3 +1,8 @@
+<?php 
+
+session_start();
+?>
+
 <!doctype html>
 <html lang="uz">
 <head>
@@ -15,25 +20,41 @@
     <section class="auth-card">
       <h1 class="h4 mb-2">Admin ro'yxatdan o'tish</h1>
       <p class="mb-4">Yangi administrator account ochish uchun formani to'ldiring.</p>
-      <form class="row g-3">
+      <p>
+        <ul>
+          <?php 
+          if(!empty($_SESSION["errors"] )):
+            foreach($_SESSION["errors"] as $error):
+          ?>
+            <li style="color:red"><?= $error?></li>
+          <?php 
+          
+          endforeach;
+        endif;
+        unset($_SESSION["errors"]);
+          ?>
+        </ul>
+      </p> 
+      <form
+       class="row g-3" action="user_add.php" method="POST">
         <div class="col-12">
           <label class="form-label">F.I.Sh</label>
-          <input type="text" class="form-control" placeholder="Ism Familya">
+          <input type="text" name="name" class="form-control" placeholder="Ism Familya">
         </div>
         <div class="col-12">
           <label class="form-label">Email</label>
-          <input type="email" class="form-control" placeholder="admin@mail.com">
+          <input type="email" name="email" class="form-control" placeholder="admin@mail.com">
         </div>
         <div class="col-12">
           <label class="form-label">Parol</label>
-          <input type="password" class="form-control" placeholder="********">
+          <input type="password" name="pass" class="form-control" placeholder="********">
         </div>
         <div class="col-12">
           <label class="form-label">Parolni tasdiqlang</label>
-          <input type="password" class="form-control" placeholder="********">
+          <input type="password" name="confirm_pass" class="form-control" placeholder="********">
         </div>
         <div class="col-12">
-          <button type="button" class="btn btn-primary w-100">Ro'yxatdan o'tish</button>
+          <button type="submit" class="btn btn-primary w-100">Ro'yxatdan o'tish</button>
         </div>
       </form>
       <p class="mt-4 mb-0">Account mavjudmi? <a href="login.php" class="text-decoration-none">Kirish</a></p>
