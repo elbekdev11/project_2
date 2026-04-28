@@ -1,5 +1,5 @@
 <?php
-
+$page="home";
 $link="";
 include("layouts/header.php");
 ?>

@@ -22,13 +22,13 @@ $_SESSION["$errors"]=$errors;
 
 try{
  $sql="INSERT INTO contact (name,email,mavzu,xabaringiz,view)
- VALUES (:name,:email,:mavzu,:xabaringiz)";
+ VALUES (:name,:email,:mavzu,:xabaringiz, :view)";
  $stmt=$conn->prepare($sql);
  $stmt->execute([
     ':name'=>$name,
     ':email'=>$email,
     ':mavzu'=>$mavzu,
-    ':xabaringiz'=>$xabar
+    ':xabaringiz'=>$xabar,
     ':view'=>0
  ]);
     $_SESSION["success"]='';

@@ -47,7 +47,7 @@ $message=$stmt->fetch();
             </div>
             <div class="col-12 d-flex gap-2">
               <a href="index.php" class="btn btn-primary">Qaytish</a>
-              <button type="submit" class="btn btn-outline-danger">O'chirish</button>
+              
             </div>
           </form>
         </section>

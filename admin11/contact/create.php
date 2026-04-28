@@ -11,35 +11,6 @@
   <link rel="stylesheet" href="../assets/css/contact.css">
 </head>
 <body>
-  <div class="page-wrap">
-    <div class="panel">
-      <div class="title-row">
-        <h1 class="h4 mb-0">Yangi contact xabari</h1>
-        <a href="index.php" class="btn btn-outline-light btn-sm">Orqaga</a>
-      </div>
-      <form class="row g-3">
-        <div class="col-md-6">
-          <label class="form-label">Ism</label>
-          <input type="text" class="form-control" placeholder="F.I.Sh">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-control" placeholder="example@mail.com">
-        </div>
-        <div class="col-12">
-          <label class="form-label">Mavzu</label>
-          <input type="text" class="form-control" placeholder="Mavzu kiriting">
-        </div>
-        <div class="col-12">
-          <label class="form-label">Xabar matni</label>
-          <textarea class="form-control" rows="6" placeholder="Xabar yozing..."></textarea>
-        </div>
-        <div class="col-12 d-flex gap-2">
-          <button type="button" class="btn btn-primary">Saqlash</button>
-          <button type="reset" class="btn btn-outline-light">Tozalash</button>
-        </div>
-      </form>
-    </div>
-  </div>
+  
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php 
-
+$page="message";
  $link="../";
  include("../layouts/header.php");
 require("../../db/connect.php");
